@@ -1,0 +1,36 @@
+{
+  "name": "mlh-commerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server/index.js",
+    "dev": "nodemon server/index.js",
+    "seedDBuser": "node server/db/seed.js --seedDB-user",
+    "seedDBproduct": "node server/db/seed.js --seedDB-product",
+    "clearDBuser": "node server/db/seed.js --clearDB-user",
+    "clearDBproduct": "node server/db/seed.js --clearDB-product",
+    "build": "cd client && npm install && npm run build",
+    "dev-client": "cd client && npm start",
+    "test": "jest --watchAll --detectOpenHandles"
+  },
+  "author": "Aryse <medictansy@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^6.7.0",
+    "helmet": "^6.0.1",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.0",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.1",
+    "stripe": "^11.8.0",
+    "xss-clean": "^0.1.1"
+  }
+}
