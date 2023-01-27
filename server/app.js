@@ -32,7 +32,14 @@ app.use(express.static(path.resolve(__dirname, "../client/build")));
 
 // PERSONAL MIDDLEWARES
 const errController = require("./controllers/errController");
+const authRouter = require("./routes/auth");
+const productsRouter = require("./routes/products");
+const cartRouter = require("./routes/cart");
+
 // ROUTES
+app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/products", productsRouter);
+app.use("/api/v1/user", cartRouter);
 
 // UNIVERSAL/UNHANDLED ROUTES
 if (process.env.NODE_ENV === "production") {
