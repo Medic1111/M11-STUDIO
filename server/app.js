@@ -33,6 +33,11 @@ app.use(
     },
   })
 );
+app.use(
+  helmet({
+    crossOriginEmbedderPolicy: false,
+  })
+);
 const limiter = rateLimit({
   max: 100,
   window: 60 * 60 * 1000,
