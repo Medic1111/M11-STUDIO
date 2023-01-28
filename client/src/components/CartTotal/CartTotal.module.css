@@ -1,0 +1,31 @@
+.pTotal {
+  position: fixed;
+  bottom: 0vh;
+  right: 0vw;
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
+  background-color: #7d98a1;
+  font-size: 1.3em;
+  border-radius: 0 25px 0 0;
+}
+.span {
+  color: #1c2321;
+  cursor: pointer;
+}
+.span:hover {
+  color: #eef1ef;
+  transition: 0.25s;
+}
+
+@media (min-width: 900px) {
+  .pTotal {
+    font-size: 1.5em;
+  }
+  .span {
+    color: #1c2321;
+  }
+}

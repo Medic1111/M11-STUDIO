@@ -1,0 +1,29 @@
+.btn {
+  transform: rotate(-90deg);
+  background-color: #7d98a1;
+  color: #1c2321;
+  width: 7.5em;
+  height: 7.5em;
+  font-size: 2em;
+  padding: 0.5em 0.5em;
+  border: transparent;
+}
+
+.btn:hover {
+  color: #eef1ef;
+  cursor: pointer;
+  background-color: #1c2321;
+  transition: 0.3s;
+  transform: scaleY(1);
+}
+
+.btn {
+  border-radius: 0 15px 0 0;
+}
+
+.showAdd {
+  display: block !important;
+}
+.hideAdd {
+  display: none;
+}

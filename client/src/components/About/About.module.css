@@ -1,0 +1,97 @@
+.section {
+  min-height: 100vh;
+  background-color: #eef1ef;
+  display: flex;
+  width: 100%;
+  max-width: 100vw;
+  overflow-y: hidden;
+  flex-direction: column;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  overflow-y: hidden;
+}
+
+.img {
+  height: 100vh;
+}
+
+.txtBox {
+  padding: 2.5vh 2.5vw;
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-wrap: wrap;
+  border-bottom: #7d98a1 solid 1px;
+  border-right: #7d98a1 solid 1px;
+}
+
+.strong {
+  font-size: 1.5em;
+}
+.boxOne {
+  width: 100%;
+  width: 33%;
+  max-width: 100vw;
+  overflow-y: hidden;
+}
+.popUp {
+  padding: 2.5vh 2.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-bottom: #7d98a1 solid 1px;
+}
+.popUpTxt {
+  font-size: 4em;
+  text-align: center;
+}
+
+.p {
+  max-width: 90%;
+}
+
+.popUpTxt2 {
+  font-size: 6em;
+  text-align: center;
+}
+
+.detailBox {
+  height: 75%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 2.5vh 2.5vw;
+}
+.des {
+  font-size: 1.7em;
+  max-width: 90%;
+  margin: 5vh 0;
+}
+.detail {
+  font-size: 10em;
+  color: #7d98a1;
+}
+
+@media (min-width: 900px) {
+  .section {
+    flex-direction: row;
+  }
+  .img {
+    height: 100vh;
+  }
+  .detail {
+    font-size: 9em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .detail {
+    font-size: 19em;
+  }
+}

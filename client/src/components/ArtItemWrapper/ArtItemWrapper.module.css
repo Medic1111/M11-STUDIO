@@ -1,0 +1,17 @@
+.div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  flex-direction: column;
+  gap: 5vh;
+  max-width: 100%;
+}
+
+@media (min-width: 900px) {
+  .div {
+    flex-direction: row;
+    justify-content: space-between;
+    width: inherit;
+  }
+}

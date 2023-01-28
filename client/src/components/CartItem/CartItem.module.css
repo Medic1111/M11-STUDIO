@@ -1,0 +1,93 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-height: 50vh;
+  width: 100%;
+  gap: 5vh;
+}
+
+.img {
+  width: 90%;
+  padding: 2em;
+  border: tomato 1em solid;
+  border-radius: 0 25px 0 0;
+  background-color: #eef1ef;
+}
+
+.txtBox {
+  display: flex;
+  width: 90%;
+  height: auto;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2.5vh 2.5vw;
+  gap: 2.5vh;
+}
+.pArtist,
+.pTitle,
+.pDes {
+  width: 80%;
+  font-size: 1.6em;
+  padding-right: 0.25em;
+  line-height: 1.3;
+}
+
+.pTitle {
+  font-size: 6em;
+  font-size: 5em;
+}
+.pDes {
+  font-size: 1.5em;
+}
+
+.pArtist {
+  font-size: 1.8em;
+}
+.pPrice {
+  align-self: flex-end;
+  font-size: 4em;
+  color: #a9b4c2;
+}
+
+.pRemove {
+  border-bottom: #1c2321 solid 1px;
+  align-self: flex-end;
+}
+.pRemove:hover {
+  border-bottom: tomato solid 1px;
+  color: tomato;
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  .card {
+    flex-direction: row;
+    gap: unset;
+  }
+
+  .img {
+    width: 25%;
+  }
+
+  .txtBox {
+    width: 50%;
+    border-right: #5e6572 solid 1px;
+  }
+
+  .pPrice {
+    margin-right: 8.5vw;
+  }
+
+  .pRemove {
+    border-bottom: #1c2321 solid 1px;
+    align-self: flex-end;
+    margin-right: 8.5vw;
+    font-size: 1.3em;
+  }
+  .pTitle {
+    font-size: 6em;
+  }
+}

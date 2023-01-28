@@ -1,0 +1,128 @@
+.section {
+  background-color: #eef1ef;
+  width: auto;
+  height: 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+  flex-wrap: wrap;
+}
+.colOne {
+  min-width: 50vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5vh;
+  height: 50%;
+}
+.title {
+  font-size: 6em;
+  text-align: center;
+}
+.colTwo,
+.colTwoAlt {
+  min-width: 50%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img {
+  max-height: 90vh;
+  padding: 2em;
+  border: solid tomato 1em;
+  border-radius: 25px 0 0 0;
+  max-width: 90%;
+}
+.colThree {
+  min-width: 45vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  padding: 5vh 2vw;
+}
+.txtBox {
+  padding: 2.5vh 2.5vw;
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-wrap: wrap;
+  border-bottom: #7d98a1 solid 1px;
+  border-right: #7d98a1 solid 1px;
+}
+
+.strong {
+  font-size: 1.5em;
+}
+.boxOne {
+  width: 100%;
+  width: 33%;
+  max-width: 100vw;
+  overflow-y: hidden;
+}
+.des {
+  font-size: 1.5em;
+  max-width: 75%;
+  padding: 0 2.5vw;
+  line-height: 1.3;
+}
+.btnBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.price {
+  font-size: 1.8em;
+  color: #7d98a1;
+}
+.id {
+  font-size: 1.2em;
+}
+.icon {
+  color: #7d98a1;
+}
+
+.back {
+  color: tomato;
+  font-size: 1.8em;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+.back:hover {
+  color: #7d98a1;
+  transition: 0.25s;
+}
+
+@media (min-width: 1000px) {
+  .section {
+    justify-content: flex-start;
+    overflow-y: scroll;
+    overflow-x: unset;
+    flex-wrap: unset;
+  }
+  .colOne {
+    height: unset;
+  }
+  .colTwo {
+    min-width: 50%;
+  }
+  .colTwoAlt {
+    min-width: 100%;
+  }
+  .img {
+    max-width: unset;
+  }
+  .des {
+    max-width: 85%;
+  }
+  .price {
+    font-size: 2.5em;
+  }
+}

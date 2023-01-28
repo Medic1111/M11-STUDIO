@@ -1,0 +1,18 @@
+.p {
+  width: 90%;
+  margin: 10%;
+  font-size: 1.8em;
+  font-weight: 300;
+}
+
+.index {
+  font-size: 3em;
+  text-align: end;
+  width: 50%;
+  color: #a9b4c2;
+}
+@media (min-width: 900px) {
+  .p {
+    width: 70%;
+  }
+}

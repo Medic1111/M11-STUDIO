@@ -1,0 +1,28 @@
+.nav {
+  position: fixed;
+  right: 0;
+  top: 20vh;
+  z-index: 9999;
+  color: #a9b4c2;
+}
+
+.ul {
+  width: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.li:hover {
+  cursor: pointer;
+  color: tomato;
+}
+
+@media (min-width: 640px) {
+  .nav {
+    top: 47.5vh;
+  }
+}

@@ -1,0 +1,54 @@
+.ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  gap: 0.5em;
+}
+
+.li {
+  transform: rotate(-90deg);
+  background-color: #7d98a1;
+  color: #1c2321;
+  height: 6em;
+  width: 5.5em;
+  height: 5.5em;
+  font-size: 1.9em;
+  padding: 0.75em 0.5em;
+  padding-left: 0.75em;
+  text-decoration: none;
+}
+
+.li:hover {
+  color: #eef1ef;
+  cursor: pointer;
+  background-color: #1c2321;
+  transition: 0.3s;
+  width: 5.5em;
+  transform: scaleY(1);
+}
+
+.li {
+  border-radius: 0 15px 0 0;
+}
+.li:last-child {
+  background-color: tomato;
+}
+
+@media (min-width: 740px) {
+  .ul {
+    gap: 0.5em;
+  }
+  .li {
+    width: 7.5em;
+    height: 7.5em;
+  }
+
+  .li:hover {
+    width: 10em;
+    transform: scaleY(1);
+  }
+}

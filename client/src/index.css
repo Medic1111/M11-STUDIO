@@ -1,13 +1,45 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  height: 100vh;
+  width: 100vw;
+  font-size: 62.5%;
+  font-family: "Ubuntu Mono", monospace;
+  font-family: "Unbounded", cursive;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: inherit;
+  width: inherit;
+  background-color: #eef1ef;
+}
+
+/* background-color: #7d98a1; */
+/* background-color: #1c2321; */
+/* background-color: #5e6572; */
+/* background-color: #a9b4c2; */
+/* background-color: #eef1ef; */
+/* color: #1c2321; */
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+
+  -webkit-box-shadow: none;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: none;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: none;
 }
