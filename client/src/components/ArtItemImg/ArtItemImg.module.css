@@ -1,0 +1,35 @@
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img1 {
+  width: 70%;
+  padding: 2em;
+  border: solid tomato 1em;
+  border-radius: 20px 0 0 0;
+  margin: 2.5vh 0;
+  cursor: pointer;
+}
+.img2 {
+  width: 50%;
+  padding: 2em;
+  border: solid tomato 1em;
+  border-radius: 20px 0 0 0;
+  margin: 2.5vh 0;
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  .img1 {
+    margin-right: 15vw;
+    margin: unset;
+    width: 55%;
+  }
+  .img2 {
+    margin: unset;
+    width: 85%;
+  }
+}

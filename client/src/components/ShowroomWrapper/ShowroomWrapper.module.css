@@ -1,0 +1,11 @@
+.section {
+  height: auto;
+  background: url("../../assets/asfalt-dark.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2vh;
+  overflow-y: hidden;
+  max-width: 100vw;
+}

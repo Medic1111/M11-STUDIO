@@ -1,0 +1,25 @@
+.return {
+  font-size: 7em;
+  width: 100%;
+  text-align: end;
+  color: #1c2321;
+}
+.return:hover {
+  cursor: pointer;
+  color: tomato;
+  transition: 0.25s;
+}
+
+@media (min-width: 900px) {
+  .return {
+    font-size: 7em;
+    width: 100%;
+    text-align: end;
+    color: #1c2321;
+  }
+  .return:hover {
+    cursor: pointer;
+    color: tomato;
+    transition: 0.25s;
+  }
+}

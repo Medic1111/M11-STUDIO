@@ -1,0 +1,111 @@
+.article {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: #7d98a1;
+  height: 80%;
+  width: 100%;
+  border-radius: 0 35px 0 0;
+  padding: 2.5vh 2.5vw;
+  border: transparent;
+  gap: 2.5vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.title {
+  font-size: 6em;
+  color: #1c2321;
+}
+.input,
+.back,
+.submit {
+  min-height: 5vh;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0 15px 0 0;
+  background-color: transparent;
+  border-bottom: #1c2321 solid 1px;
+  font-family: "Unbounded", cursive;
+  color: #1c2321;
+}
+.input {
+  padding-left: 0.25em;
+  color: #1c2321;
+  font-size: 1.7em;
+}
+
+.input::placeholder {
+  color: #1c2321;
+}
+
+.back,
+.submit {
+  text-transform: uppercase;
+  border-bottom: unset;
+  color: #1c2321;
+}
+.submit {
+  background-color: #1c2321;
+}
+
+.btnBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back,
+.submit {
+  border: none;
+  background-color: transparent;
+  width: unset;
+  padding-left: 0.25em;
+  font-family: "Unbounded", cursive;
+}
+
+.back:hover,
+.submit:hover {
+  transition: 0.25s;
+  cursor: pointer;
+  color: #eef1ef;
+}
+.p {
+  cursor: pointer;
+  font-size: 1.3em;
+}
+.p:hover {
+  color: #eef1ef;
+  transition: 0.25s;
+}
+
+@media (min-width: 900px) {
+  .input,
+  .submit {
+    height: 5vh;
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  .btnBox {
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  .p {
+    margin-left: 20%;
+  }
+  .title {
+    margin-left: 20%;
+  }
+}

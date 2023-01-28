@@ -1,0 +1,16 @@
+.pBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+  margin: 2.5vh 0;
+}
+.p,
+.p2 {
+  color: #1c2321;
+  font-size: 1.5em;
+}
+.p2 {
+  border-bottom: solid tomato 2px;
+}
