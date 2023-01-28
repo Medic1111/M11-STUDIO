@@ -25,19 +25,15 @@ app.use(helmet.expectCt());
 app.use(helmet.originAgentCluster());
 app.use(helmet.referrerPolicy());
 // config for image reading outta self-src
-app.use(
-  helmet.contentSecurityPolicy({
-    useDefaults: true,
-    directives: {
-      "img-src": ["'self'", "https: data:"],
-    },
-  })
-);
-app.use(
-  helmet({
-    crossOriginEmbedderPolicy: false,
-  })
-);
+// app.use(
+//   helmet.contentSecurityPolicy({
+//     useDefaults: true,
+//     directives: {
+//       "img-src": ["'self'", "https: data:"],
+//     },
+//   })
+// );
+
 const limiter = rateLimit({
   max: 100,
   window: 60 * 60 * 1000,
