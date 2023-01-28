@@ -14,7 +14,25 @@ require("dotenv").config();
 const app = express();
 
 // MIDDLEWARES:
-app.use(helmet());
+
+app.use(helmet.frameguard());
+app.use(helmet.hidePoweredBy());
+app.use(helmet.hsts());
+app.use(helmet.ieNoOpen());
+app.use(helmet.noSniff());
+app.use(helmet.dnsPrefetchControl());
+app.use(helmet.expectCt());
+app.use(helmet.originAgentCluster());
+app.use(helmet.referrerPolicy());
+// config for image reading outta self-src
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      "img-src": ["'self'", "https: data:"],
+    },
+  })
+);
 const limiter = rateLimit({
   max: 100,
   window: 60 * 60 * 1000,
