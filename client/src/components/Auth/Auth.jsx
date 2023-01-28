@@ -9,6 +9,10 @@ import { uiCtx } from "../../features/ui-ctx";
 const Auth = () => {
   const authMgr = useContext(authCtx);
   const uiMgr = useContext(uiCtx);
+
+  const [err, setErr] = useState(false);
+  const [errMsg, setErrMsg] = useState("");
+
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -17,6 +21,8 @@ const Auth = () => {
   });
 
   const inputChangeHandler = (e) => {
+    setErrMsg("");
+    setErr(false);
     const { name, value } = e.target;
     setFormData((prev) => {
       return { ...prev, [name]: value };
@@ -33,7 +39,10 @@ const Auth = () => {
         authMgr.setIsAuth(true);
         uiMgr.dispatch({ type: "CLOSE" });
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        setErrMsg(err.response.data.message);
+        setErr(true);
+      });
   };
 
   return (
@@ -93,6 +102,7 @@ const Auth = () => {
               ? "Dont have an account? Register"
               : "Already have an account? Login"}
           </p>
+          {err && <p>{errMsg}</p>}
         </form>
       </Slide>
     </article>
