@@ -3,6 +3,7 @@ const AppError = require("../utils/app_error");
 const { User } = require("../models/users");
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 const sendEmail = require("../utils/send_email");
+const { confirmation } = require("../assets/email");
 
 const addControl = handleAsync(async (req, res, next) => {
   let user = await User.findByIdAndUpdate(
@@ -46,7 +47,8 @@ const checkoutControl = handleAsync(async (req, res, next) => {
   await sendEmail({
     email: user.email,
     subject: "m-11 Thank you for your purchase",
-    message: "This is the message",
+    // message: "This is the message",
+    message: confirmation(payment.id),
   });
 
   res.status(200).json(user);

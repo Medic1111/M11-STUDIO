@@ -3,6 +3,7 @@ const handleAsync = require("../utils/handle_async");
 const AppError = require("../utils/app_error");
 const sendEmail = require("../utils/send_email");
 const jwt = require("jsonwebtoken");
+const { welcome } = require("../assets/email");
 
 const registerControl = handleAsync(async (req, res, next) => {
   let user = await User.create(req.body);
@@ -10,7 +11,8 @@ const registerControl = handleAsync(async (req, res, next) => {
   await sendEmail({
     email: req.body.email,
     subject: "Welcome from m-11!",
-    message: "This is the message",
+    // message: "<h1>This is the message</h1>",
+    message: welcome,
   })
     .then(async () => {
       await User.findById(user._id).then((user) =>
