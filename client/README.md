@@ -3,3 +3,4 @@
 - Create User Account page allowing to change password and delete account
 - Expand Products to add more issues(expo months)
 - Implement SMS (perhaps two factor auth)
+- Implement Stock count on items
