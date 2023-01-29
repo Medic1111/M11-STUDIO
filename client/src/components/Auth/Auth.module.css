@@ -1,13 +1,3 @@
-.article {
-  height: 100%;
-  width: 100%;
-  background-color: transparent;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -83,10 +73,16 @@
 .p {
   cursor: pointer;
   font-size: 1.3em;
+  width: fit-content;
 }
 .p:hover {
   color: #eef1ef;
   transition: 0.25s;
+}
+
+.err {
+  font-size: 1.3em;
+  text-decoration: underline;
 }
 
 @media (min-width: 900px) {
@@ -102,9 +98,8 @@
     margin-left: 20%;
   }
 
-  .p {
-    margin-left: 20%;
-  }
+  .p,
+  .err,
   .title {
     margin-left: 20%;
   }
