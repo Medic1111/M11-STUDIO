@@ -1,10 +1,11 @@
 import classes from "./Auth.module.css";
 import { useContext, useState } from "react";
 import { Slide } from "react-awesome-reveal";
-import axios from "axios";
-import CloseModal from "../../common/CloseModal/CloseModal";
 import { authCtx } from "../../features/auth-ctx";
 import { uiCtx } from "../../features/ui-ctx";
+import axios from "axios";
+import CloseModal from "../../common/CloseModal/CloseModal";
+import FormWrapper from "../../common/FormWrapper/FormWrapper";
 
 const Auth = () => {
   const authMgr = useContext(authCtx);
@@ -49,7 +50,7 @@ const Auth = () => {
   };
 
   return (
-    <article className={classes.article}>
+    <FormWrapper>
       <Slide className={classes.form} direction="up">
         <form onSubmit={submitHandler} className={classes.form}>
           <p className={classes.title}>
@@ -105,10 +106,10 @@ const Auth = () => {
               ? "Dont have an account? Register"
               : "Already have an account? Login"}
           </p>
-          {err && <p>{errMsg}</p>}
+          {err && <p className={classes.err}>{errMsg}</p>}
         </form>
       </Slide>
-    </article>
+    </FormWrapper>
   );
 };
 
