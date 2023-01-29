@@ -6,11 +6,14 @@ export const uiCtx = createContext({
   setSelectedArt: () => {},
   state: initialState,
   dispatch: () => {},
+  isLoading: false,
+  setIsLoading: () => {},
 });
 
 const UiProvider = ({ children }) => {
   const [selectedArt, setSelectedArt] = useState({});
   const [state, dispatch] = useReducer(UiRed, initialState);
+  const [isLoading, setIsLoading] = useState(false);
   return (
     <uiCtx.Provider
       value={{
@@ -18,6 +21,8 @@ const UiProvider = ({ children }) => {
         setSelectedArt,
         state,
         dispatch,
+        isLoading,
+        setIsLoading,
       }}
     >
       {children}

@@ -16,6 +16,7 @@ const CheckoutForm = ({ setShowConfirm }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (elements == null) return;
+    uiMgr.setIsLoading(true);
 
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: "card",
@@ -33,8 +34,12 @@ const CheckoutForm = ({ setShowConfirm }) => {
         .then((serverRes) => {
           authMgr.setCurrentUser(serverRes.data);
           setShowConfirm(true);
+          uiMgr.setIsLoading(false);
         })
-        .catch((err) => setErr(true));
+        .catch((err) => {
+          uiMgr.setIsLoading(false);
+          setErr(true);
+        });
     }
   };
   return (
