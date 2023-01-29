@@ -1,0 +1,7 @@
+- Backdrop close modal functionality for forms
+- Feedback item added to cart
+- Fix feedback form desk view
+- Refactor schema and add expo month for filtering
+- Create User Account page allowing to change password and delete account
+- Expand Products to add more issues(expo months)
+- Implement SMS (perhaps two factor auth)
