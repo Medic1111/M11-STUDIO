@@ -30,6 +30,7 @@ const Auth = () => {
   };
 
   const submitHandler = async (e) => {
+    uiMgr.setIsLoading(true);
     e.preventDefault();
     let url = authMgr.isLoggin ? "/api/v1/auth/login" : "/api/v1/auth/register";
     await axios
@@ -38,10 +39,12 @@ const Auth = () => {
         authMgr.setCurrentUser(serverRes.data.user);
         authMgr.setIsAuth(true);
         uiMgr.dispatch({ type: "CLOSE" });
+        uiMgr.setIsLoading(false);
       })
       .catch((err) => {
         setErrMsg(err.response.data.message);
         setErr(true);
+        uiMgr.setIsLoading(false);
       });
   };
 
